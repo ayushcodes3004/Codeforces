@@ -14,21 +14,12 @@ int main()
         {
             cin >> arr[i];
         }
-        sort(arr.begin(), arr.end());
-        int timer = b - 1;
-        int c = b;
+        long long sum = b;
         for (auto it : arr)
         {
-            if (c + it <= a)
-            {
-                timer += it;
-            }
-            else
-            {
-                timer += a;
-            }
+            sum += min(it, a - 1);
         }
-        cout << timer << endl;
+        cout << sum << endl;
     }
     return 0;
 }
